@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyQuiz</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/new.css">
+</head>
+
+<body>
+    <header>
+        <h1>Create your own questions</h1>
+    </header>
+    <main>
+        <form action="" id='form'>
+            <div class="line"><label for='Question'>Question: </label><input type="text" name="Q" id="Question"></div><br>
+            <div class="line"><label for='Answer1'>Answer1: </label><input type="text" name="A1" id="Answer1"></div><br>
+            <div class="line"><label for='Answer2'>Answer2: </label><input type="text" name="A2" id="Answer2"></div><br>
+            <div class="line"><label for='Answer3'>Answer3: </label><input type="text" name="A3" id="Answer3"></div><br>
+            <div class="line"><label for='Correct'>Correct Answer:</label><input type="text" name="Corr" id="Correct"></div>
+            <br>
+            <input type="submit" value="Submit" id="submit" class='button'>
+        </form>
+        <div class="new">
+            <a href="index.html">Back to the quiz</a>
+        </div>
+    </main>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="firebase.js"></script>
+    <script src="js/code.js"></script>
+</body>
+
+</html>

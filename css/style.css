@@ -1,0 +1,60 @@
+body {
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+
+/* elements */
+
+header {
+    padding-top: 20px;
+    width: 85%;
+    text-align: center;
+    margin: auto;
+}
+
+main {
+    padding-top: 80px;
+    width: 85%;
+    text-align: center;
+    margin: auto;
+}
+
+aside {
+    display: none;
+}
+
+.answ {
+    padding-top: 20px;
+    font-size: 3vw;
+}
+
+.score {
+    padding-top: 80px;
+    width: 85%;
+    text-align: center;
+    margin: auto;
+}
+
+
+/* buttons */
+
+#again {
+    margin-top: 45px;
+}
+
+.new {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+/* typography */
+
+h1 {
+    font-size: 7vw;
+}
+
+h2 {
+    font-size: 4vw;
+}

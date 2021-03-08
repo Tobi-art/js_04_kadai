@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>MyQuiz Game</h1>
+        <div class="new">
+            <a href="new.html">Create new question</a>
+        </div>
+    </header>
+    <main>
+        <h2 id="q"></h2>
+        <div class="answ">
+            <input type="radio" name="ans" value="1"><span id='ans1'></span>
+            <input type="radio" name="ans" value="2"><span id='ans2'></span>
+            <input type="radio" name="ans" value="3"><span id='ans3'></span>
+        </div>
+
+    </main>
+    <aside class='score'>
+        <h2 id="score"></h2>
+        <input type="button" value="Play again" id="again" class='button'>
+    </aside>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="firebase.js"></script>
+    <script src="code.js"></script>
+</body>
+
+</html>
