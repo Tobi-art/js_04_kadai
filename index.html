@@ -14,24 +14,27 @@
 
 <body>
     <header>
-        <h1>MyQuiz Game</h1>
-        <div class="new">
-            <a href="new.html">Create new question</a>
-        </div>
+        <h1>IT勉強会</h1>
     </header>
     <main>
         <h2 id="q"></h2>
         <div class="answ">
-            <input type="radio" name="ans" value="1"><span id='ans1'></span>
-            <input type="radio" name="ans" value="2"><span id='ans2'></span>
-            <input type="radio" name="ans" value="3"><span id='ans3'></span>
+            <div class="line"><input type="radio" name="ans" value="1"><span id='ans1'></span></div>
+            <div class="line"><input type="radio" name="ans" value="2"><span id='ans2'></span></div>
+            <div class="line"><input type="radio" name="ans" value="3"><span id='ans3'></span></div>
         </div>
 
     </main>
     <aside class='score'>
         <h2 id="score"></h2>
-        <input type="button" value="Play again" id="again" class='button'>
+        <input type="button" value="もう一回" id="again" class='button'>
     </aside>
+    <footer>
+        <div class="new">
+            <a href="new.html">新しい単語を登録する</a>
+            <a href="" id="delete">この単語を削除する</a>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -42,6 +45,7 @@
 
     <script src="firebase.js"></script>
     <script src="code.js"></script>
+    <!-- <script src="testdata.js"></script> -->
 </body>
 
 </html>

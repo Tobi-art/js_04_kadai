@@ -7,27 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyQuiz</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/new.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Create your own questions</h1>
+        <h1>新しい単語を登録</h1>
     </header>
     <main>
         <form action="" id='form'>
-            <div class="line"><label for='Question'>Question: </label><input type="text" name="Q" id="Question"></div><br>
-            <div class="line"><label for='Answer1'>Answer1: </label><input type="text" name="A1" id="Answer1"></div><br>
-            <div class="line"><label for='Answer2'>Answer2: </label><input type="text" name="A2" id="Answer2"></div><br>
-            <div class="line"><label for='Answer3'>Answer3: </label><input type="text" name="A3" id="Answer3"></div><br>
-            <div class="line"><label for='Correct'>Correct Answer:</label><input type="text" name="Corr" id="Correct"></div>
-            <br>
-            <input type="submit" value="Submit" id="submit" class='button'>
+            <div class="line"><label for='Question'>新しい単語 </label><input type="text" name="Q" id="Question"></div><br>
+            <div class="line"><label for='Answer1'>選択肢１： </label><input type="text" name="A1" id="Answer1"></div><br>
+            <div class="line"><label for='Answer2'>選択肢２： </label><input type="text" name="A2" id="Answer2"></div><br>
+            <div class="line"><label for='Answer3'>選択肢３： </label><input type="text" name="A3" id="Answer3"></div><br>
+            <div class="line"><label for='Correct'>正解:（1～3）</label><input type="number" min=1 max=3 name="Corr" id="Correct"></div>
+            <a href="" id="submit">登録する</a>
         </form>
-        <div class="new">
-            <a href="index.html">Back to the quiz</a>
-        </div>
     </main>
+    <footer>
+        <div class="new">
+            <a href="index.html">練習に戻る</a>
+        </div>
+    </footer>
 
 
 
@@ -39,7 +42,7 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
     <script src="firebase.js"></script>
-    <script src="js/code.js"></script>
+    <script src="code.js"></script>
 </body>
 
 </html>
