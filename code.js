@@ -47,27 +47,30 @@ function getKey(data) {
         };
         /////次の質問に進みます///////////////////////
         i++;
-        // ↑ ここの時点で出てきたデータダケ消したいです。
-        ////////////////データ削除//////////////////
-        const dlt = firebase.database().ref('Words')
-        dlt.on('value', getKeys)
-
-        function getKeys(data) {　　 //5行目〜10行目と同じですが、この関数をなかなか呼び出しできません…
-            var scores = data.val();
-            var keys = Object.keys(scores)
-            var k = keys[i]; ///
-            $("#delete").on('click', function() {
-                firebase.database().ref(`Words/${k}`).remove()
-            });
-        }
-
         //////////一回全ての質問が出てからスコアを表示します////////////
         if (i < arrQna.length) {
             q(i);
+            // ↑ ここの時点で出てきたデータダケ消したいです。
+            ////////////////データ削除//////////////////
+            const dlt = firebase.database().ref('Words')
+            dlt.on('value', getKeys)
+
+            function getKeys(data) {
+                var scores = data.val();
+                var keys = Object.keys(scores)
+                var k = keys[i]; ///
+                ///ここにalert(arrQna[i][0])と記述すると、次の質問のみ表示されます。
+                $("#delete").on('click', function() {
+                    ///ここにalert(arrQna[i][0])と記述すると、次の質問がi回表示されます？？？？？            
+                    alert(`"${arrQna[i][0]}"を削除しますか。消してから復旧できません！`)
+                        // firebase.database().ref(`Words/${k}`).remove()
+                });
+            }
         } else {
             $('main').hide(200);
+            $('#delete').hide(200);
             setTimeout(function() {
-                $('#score').text(`You've got ${score} out of ${arrQna.length} correct`);
+                $('#score').text(`今回の正解率は${(score/arrQna.length)*100}%です。`);
             }, 500);
             $('aside').show(200);
         }
@@ -82,7 +85,7 @@ function getKey(data) {
     });
 }
 
-////新しいデータを登録します/////////////////////
+//////////新しいデータを登録します/////////////////////
 const newEntry = firebase.database().ref('Words');
 
 $('#submit').on('click', function() {
@@ -99,5 +102,5 @@ $('#submit').on('click', function() {
         Answer3: an3,
         Correct: co
     });
-    alert('New Question Registered.')
+    alert('登録できました。')
 });
